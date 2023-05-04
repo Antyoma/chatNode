@@ -1,9 +1,16 @@
 const express = require('express');
+const router = express.Router();
 
 var app = express();
 
-app.use('/', function (req, res) {
-    res.send('Hola, bienvenid@ a la creación de un chat con NodeJS');
+app.use(router);
+
+router.get('/message', function (req, res) {
+    res.send('Hola, bienvenid@ a la lista de mensajes del chat');
+});
+
+router.delete('/message', function (req, res) {
+    res.send('Mensajes añadidos del chat');
 });
 
 app.listen(3000);
