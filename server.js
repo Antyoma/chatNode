@@ -8,6 +8,10 @@ app.use(express.urlencoded({extended: false}));
 app.use(router);
 
 app.get('/message', function (req, res) {
+    console.log(req.headers);
+    res.header({
+        "custom-header": "Nuestro valor personalizado",
+    });
     res.send('Hola, bienvenid@ a la lista de mensajes del chat');
 });
 
