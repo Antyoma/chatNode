@@ -44,6 +44,15 @@ function deleteMessage(id) {
             return false;
         }
 
+        const fullMessage = {
+            chat: chat,
+            user: user,
+            message: message,
+            date: new date(),
+        };
+
+        store.add(fullmessage);
+
         store.remove(id)
         .then(() =>{
             resolve();
