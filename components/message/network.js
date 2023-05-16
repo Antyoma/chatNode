@@ -5,7 +5,7 @@ const controller= require('./controller');
 const router = express.Router();
 
 const upload = multer({
-    dest: 'uploads',
+    dest: 'uploads/',
 });
 
 router.get('/', function (req, res) {

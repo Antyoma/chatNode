@@ -1,7 +1,6 @@
 const express = require('express');
 const response = require('../../components/network/response');
 const controller= require('./controller');
-const { param } = require('./network');
 const router = express.Router();
 
 router.post('/', function(req, res) {
