@@ -2,12 +2,15 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 
+const cors = require('cors');
 // const bodyParser = require('body-parser');
 const socket = require('./socket');
 const db = require('./db')
 const router = require('./components/network/routes');
 
 db('mongodb+srv://user:user1234@telegram.yvofkw3.mongodb.net/?retryWrites=true&w=majority');
+
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
